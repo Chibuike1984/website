@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Hidden file input -->
+<input type="file" id="fileInput" accept="image/*" style="display:none;">
+
+<!-- Custom button or image -->
+<button id="uploadBtn">Upload Picture</button>
+<!-- OR use an image -->
+<!-- <img src="upload-icon.png" id="uploadBtn" style="cursor: pointer;" /> -->
+
+<!-- Show uploaded image -->
+<img id="preview" src="#" alt="Image preview" style="display:block; width: 200px;">
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Trigger file input when custom button is clicked
+  $("#uploadBtn").click(function() {
+    $("#fileInput").click();
+  });
+
+  // Preview the image
+  $("#fileInput").change(function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        $("#preview").attr("src", e.target.result).show();
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>

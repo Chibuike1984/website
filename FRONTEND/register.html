@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn Extra Cash || Registration</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/responsiveness.css">
+
+   <link rel="stylesheet" href="boostrap/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preLoader">
+    <img src="./image/loader.gif" alt="loading...">
+  </div>
+
+
+
+
+  <div class="register-container" id="body">
+    <img src="./image/face1.svg" alt="image">
+    <h1>Create Account</h1>
+    <p>Create your account to get cashback Bonus</p>
+
+    <form action="login.html" method="post">
+      <div class="name-row">
+        <div class="form-group">
+          <input type="text" id="firstname" name="firstname" required placeholder=" " />
+          <label for="firstname">First Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastname" name="lastname" required placeholder=" " />
+          <label for="lastname">Last Name</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder=" " />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="username" name="username" required placeholder=" " />
+        <label for="username">Username</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="referral" name="referral" placeholder=" " />
+        <label for="referral">Referral Code (Optional)</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" name="password" required placeholder=" " />
+        <label for="password">Password</label>
+        <i class="bi bi-eye-slash toggle-password" onclick="togglePassword(this, 'password')"></i>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="cpassword" name="cpassword" required placeholder=" " />
+        <label for="cpassword">Confirm Password</label>
+        <i class="bi bi-eye-slash toggle-password" onclick="togglePassword(this, 'cpassword')"></i>
+      </div>
+
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label class="terms-label">
+            I agree to the <a href="./image/terms.html" target="_blank"> Terms & Conditions</a>
+        </label>
+        </div>
+
+
+      <button type="submit">Register</button>
+
+      <p>Already have an account? <a href="login.html"> Login here</a></p>
+
+      <p><a href="index.html">Back to Home</a></p>
+    </form>
+  </div>
+
+
+
+  <script src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn Extra Cash || Referral Link</title>
+  <link rel="stylesheet" href="css/referral-link.css">
+  <link rel="stylesheet" href="css/responsiveness.css">
+
+   <link rel="stylesheet" href="boostrap/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+<!-- 
+
+  <div id="preLoader">
+    <img src="./image/loader.gif" alt="loading...">
+  </div> -->
+
+  <div id="#">
+
+  <!-- HAEDER TOP CONTAINER START HERE -->
+  <header>
+
+    <div class="dashboard-header">
+        <h2>FlowEarmPro</h2>
+    </div>
+
+    <div class="dashboard-header2">
+        <h4>User Dashboard</h4>
+        <span onclick="window.location.href = 'login.html'">
+          <i class="bi bi-power"></i> 
+          <p>Logout</p>
+        </span>
+    </div>
+
+  </header>
+  <!-- HEADER TOP CONTAINER END HERE -->
+
+
+
+  <!-- HEADER BOTTOM CONTAINER START HERE -->
+   <!-- MOBILE VIEW -->
+    <head>
+        <div class="bottom-header">
+
+          <div class="block">
+            <i class="bi bi-grid-1x2-fill"></i>
+            <a href="user-dashboard.html">Dashboard</a>
+          </div>
+
+
+          <div class="block">
+            <i class="bi bi-bullseye"></i>
+            <a href="earning.html">Earning</a>
+          </div>
+          
+
+          <div class="block">
+            <i class="bi bi-key"></i>
+            <a href="activation.html">Activation</a>
+          </div>
+          
+
+          <div class="block">
+            <i class="bi bi-rocket"></i>
+            <a href="referral-link.html">Referral</a>
+          </div>
+          
+
+          <div class="block" id="more" onclick="More()">
+            <i class="bi bi-arrow-up-circle"></i>
+            <a href="#"><i></i>More</a>
+          </div>
+          
+            
+        </div>
+    </head>    
+  
+
+
+
+
+
+
+     <!-- MOBILE VIEW -->
+    <head>
+        <div class="bottom-header2" id="external">
+          <div class="bottom-header2-flex">
+
+          <div class="blockk">
+            <div class="blockkk">
+              <i class="bi bi-wallet2"></i>
+             </div>
+              <a href="withdraw.html">Withdraw</a>
+          </div>
+
+          <div class="blockk">
+            <div class="blockkk">
+              <i class="bi bi-megaphone-fill"></i>
+             </div>
+              <a href="https://t.me/Kizs04">Sponsor Post</a>
+          </div>
+
+          <div class="blockk">
+            <div class="blockkk">
+              <i class="bi bi-gear"></i>
+             </div>
+              <a href="manageprofile.html">Manage Profile</a>
+          </div>
+
+          <div class="blockk" onclick="close(More())">
+            <div class="blockkk">
+              <i class="bi bi-x big"></i>
+             </div>
+              <a href="#"></a>
+          </div>
+
+        </div>
+        </div>
+    </head>    
+  <!-- HEADER BOTTOM CONTAINER END HERE -->
+
+
+
+
+
+
+
+
+
+    <!-- BODY CONTENT OF THE SIDE AND MAIN CONTAINERS START HERE -->
+
+
+  <div class="dashboard-container">
+
+    <!-- Sidebar start here -->
+    <aside class="sidebar">
+      <ul>
+        <li onclick="window.location.href = 'user-dashboard.html'"><i class="bi bi-grid-1x2-fill"></i> Dashboard</li>
+        <li onclick="window.location.href = 'earning.html'"><i class="bi bi-bullseye"></i> Earnings</li>
+        <li onclick="window.location.href = 'activation.html'"><i class="bi bi-key"></i> Activation</li>
+        <li onclick="window.location.href = 'referral-link.html'"><i class="bi bi-rocket"></i> Referrals</li>
+        <li onclick="window.location.href = 'withdraw.html'"><i class="bi bi-wallet2"></i> Withdraw</li>
+        <li onclick="window.location.href = 'https://t.me/Kizs04'"><i class="bi bi-megaphone-fill"></i> Sponsor Post</li>
+        <li onclick="window.location.href = 'manageprofile.html'"><i class="bi bi-gear"></i> Manage Profile</li>
+      </ul>
+    </aside>
+    <!-- sidebar end here -->
+
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <div class="flex">
+        <div class="box-one">
+            <h1>Referral Link - Copy it and share with your friends <i class="bi bi-gift"></i></h1>
+
+          <!-- Cards -->
+        <div class="cards">
+          <div class="card card-referral">
+            <h3>Total Referrals</h3>
+            <p>15</p>
+        
+          </div>
+          <div class="card card-referral">
+            <h3>Verified Referrals</h3>
+            <p>8</p>
+          </div>
+    
+        </div>
+
+
+        </div>
+      
+      </div>
+
+
+
+      <!-- Referral Link -->
+      <div class="referral-box">
+        <label>Referral Code:</label>
+        <p>JOHN123</p>
+      </div>
+
+       <!-- Referral Link -->
+      <div class="referral-box">
+        <label>Referral Link:</label>
+        <input type="text" value="https://yourdomain.com/register?ref=JOHN123" readonly />
+        <button onclick="copyLink()">Copy</button>
+      </div>
+
+
+      <!-- Referrals Table -->
+      <h2>Your Referrals</h2>
+      <div class="table-container">
+        <table class="referral-table">
+            <thead>
+            <tr>
+              ` <th>S/N</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Registered On</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>JaneSmith</td>
+                <td class="verified">Verified</td>
+                <td>17-September-2021</td>
+            </tr>
+
+             <tr>
+                <td>2</td>
+                <td>JaneSmith</td>
+                <td class="pending">Pending</td>
+                <td>17-September-2021</td>
+            </tr>
+
+             <tr>
+                <td>3</td>
+                <td>JaneSmith</td>
+                <td class="pending">Pending</td>
+                <td>17-September-2021</td>
+            </tr>
+
+             <tr>
+                <td>4</td>
+                <td>JaneSmith</td>
+                <td class="verified">Verified</td>
+                <td>17-September-2021</td>
+            </tr>
+          
+            </tbody>
+        </table>
+      </div>
+
+
+
+
+ 
+                <div class="accordion">
+
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                    <span><span class=" bi bi-circle-fill icon"></span> How does referring a friend work?</span>
+                    <span class="bi bi-plus"></span>
+                    </div>
+                    <div class="accordion-content">
+                    <span class="close"></span>
+                    <p>When you refer a friend using your link or username, they must sign up and complete a qualifying transaction. Then, you both may receive bonuses.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                    <span><span class="bi bi-circle-fill icon"></span> How fast do I get my bonus after my friend signs up and makes a payment?</span>
+                    <span class="bi bi-plus"></span>
+                    </div>
+                    <div class="accordion-content">
+                    <span class="close"></span>
+                    <p>
+                        If your friend used your referral link or username to sign up and made a qualifying transaction, you should receive your bonus within 48 hours. Sometimes up to 5 business days. Requirements:
+                    </p>
+                    <ul>
+                        <li>Minimum transfer of $150 (USD, CAD, GBP, EUR).</li>
+                        <li>Must be funded by a bank/card/partner wallet.</li>
+                        <li>Excludes same currency transfers.</li>
+                        <li>Completed within 30 days of signup.</li>
+                    </ul>
+                    </div>
+                </div>
+
+
+
+
+              </div>
+     
+    </main>
+  </div>
+
+        
+    <!-- BODY CONTENT OF THE SIDE AND MAIN CONTAINERS END HERE -->
+
+
+  </div>
+  <script src="js/referral-link.js"></script>
+
+</body>
+</html>
