@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seamless Testimonial Carousel</title>
+  <style>
+    :root {
+      --backgroundcolor: #f5f5f5;
+      --card-bg: #fff;
+      --text-color: #333;
+      --scroll-speed: 40s;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--backgroundcolor);
+      color: var(--text-color);
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left var(--scroll-speed) linear infinite;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg);
+      width: 280px;
+      min-height: 130px;
+      padding: 15px;
+      margin-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Responsive cards */
+    @media (max-width: 768px) {
+      .testimonial-card {
+        width: 220px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-card {
+        width: 200px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <!-- Testimonials x2 (duplicate after original) -->
+      <div class="testimonial-card"><strong>Chinedu A. — Enugu</strong>I joined with ₦3,500 and in 2 weeks withdrew ₦16,500. Legit!</div>
+      <div class="testimonial-card"><strong>Amaka B. — Lagos</strong>Earned ₦5,000 in the first week. Love it!</div>
+      <div class="testimonial-card"><strong>Ibrahim M. — Abuja</strong>₦12,000 from referrals and tasks. Great side hustle.</div>
+      <div class="testimonial-card"><strong>Peace O. — PH</strong>Made ₦7,000 as a student last week. Highly recommend!</div>
+      <div class="testimonial-card"><strong>Loveth I. — Benin</strong>Clean interface, easy earnings. It works!</div>
+      <div class="testimonial-card"><strong>Samuel J. — Kaduna</strong>₦20,000 in a month. Insane!</div>
+      <div class="testimonial-card"><strong>Grace F. — Ogun</strong>I withdraw weekly now. Solid platform.</div>
+      <div class="testimonial-card"><strong>Joseph K. — Anambra</strong>Game changer. Got paid multiple times.</div>
+      <div class="testimonial-card"><strong>Fatima Z. — Kano</strong>₦15,000 from task bonuses. Perfect for me!</div>
+      <div class="testimonial-card"><strong>Tony E. — Delta</strong>Withdrawals are fast and smooth. 100% legit!</div>
+
+      <!-- Duplicated set (exact same, seamless repeat) -->
+      <div class="testimonial-card"><strong>Chinedu A. — Enugu</strong>I joined with ₦3,500 and in 2 weeks withdrew ₦16,500. Legit!</div>
+      <div class="testimonial-card"><strong>Amaka B. — Lagos</strong>Earned ₦5,000 in the first week. Love it!</div>
+      <div class="testimonial-card"><strong>Ibrahim M. — Abuja</strong>₦12,000 from referrals and tasks. Great side hustle.</div>
+      <div class="testimonial-card"><strong>Peace O. — PH</strong>Made ₦7,000 as a student last week. Highly recommend!</div>
+      <div class="testimonial-card"><strong>Loveth I. — Benin</strong>Clean interface, easy earnings. It works!</div>
+      <div class="testimonial-card"><strong>Samuel J. — Kaduna</strong>₦20,000 in a month. Insane!</div>
+      <div class="testimonial-card"><strong>Grace F. — Ogun</strong>I withdraw weekly now. Solid platform.</div>
+      <div class="testimonial-card"><strong>Joseph K. — Anambra</strong>Game changer. Got paid multiple times.</div>
+      <div class="testimonial-card"><strong>Fatima Z. — Kano</strong>₦15,000 from task bonuses. Perfect for me!</div>
+      <div class="testimonial-card"><strong>Tony E. — Delta</strong>Withdrawals are fast and smooth. 100% legit!</div>
+    </div>
+  </div>
+
+</body>
+</html>

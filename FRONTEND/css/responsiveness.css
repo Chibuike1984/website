@@ -417,6 +417,11 @@ head
         display:flex;
     }
 
+    #sidebar
+    {
+        display:block;
+    }
+
 
     .box-one {
     padding:10px;

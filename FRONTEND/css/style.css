@@ -142,7 +142,7 @@ header
   
 }
 
-.sidebar {
+#sidebar {
   width: 70%;
   height: 100vh;
   background: linear-gradient(to right, var(--primary), var(--purple-brand));
@@ -154,7 +154,7 @@ header
   transition: left 1s ease-in-out;
 }
 
-.sidebar.show {
+#sidebar.show {
   left: 0;
 }
 
@@ -572,58 +572,75 @@ header
     -webkit-text-fill-color: transparent;
 }
 
-.scroll-div
-{
-    background-color:var(--background);
-    width:100%;
-    height:auto;
-    padding-top:20px;
-    padding-bottom:20px;
-    
-   
-}
 
-.scrolling
-{
-    margin-left:5%;
-    margin-right:5%;
-    height:auto;
-    overflow-x:auto;
-    white-space:nowrap;
-    background-color: var(--background);
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
-}
 
-.scrolling::-webkit-scrollbar 
-{
-  display: none;             /* Chrome, Safari */
-}
 
-.card-fifth
-{
-   display: inline-block;
-    width: 20em;
-    height:15em;
-    margin:20px 5px;
-    background:var(--accent);
-    border:none;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    vertical-align: top;
-    padding: 10px;
-}
 
-.card-fifth:first-child
-{
-    margin-left:30px;
-}
+    :root {
+      --backgroundcolor: #f5f5f5;
+      --card-bg: #fff;
+      --text-color: #333;
+      --scroll-speed: 60s;
+    }
 
-.card-fifth:last-child
-{
-    margin-right:30px;
-}
 
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--backgroundcolor);
+      padding: 20px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left var(--scroll-speed) linear infinite;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg);
+      width: 280px;
+      min-height:100px;
+      padding: 15px;
+      padding-left:40px;
+      padding-top:40px;
+      margin-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Responsive cards */
+    @media (max-width: 768px) {
+      .testimonial-card {
+        width: 220px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-card {
+        width: 200px;
+        font-size: 13px;
+      }
+    }
 
 
 
@@ -685,13 +702,15 @@ header
 
     .accordion-content p
     {
-    
+        line-height:20px;
+        color:red;
     }
+
 
     ul{
         margin-top:10px;
-        list-style-type:decimal;
-        line-height:20px;
+        list-style-type:none;
+        line-height:30px;
         margin-left:10px;
     }
 

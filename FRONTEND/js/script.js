@@ -11,18 +11,18 @@ window.addEventListener("load", function(){
 
 document.getElementById('menu').addEventListener('click', function(event) {
   event.stopPropagation();
-  const sidebar = document.querySelector('.sidebar');
+  const sidebar = document.querySelector('#sidebar');
   sidebar.classList.toggle('show');
 });
 
 window.addEventListener('click', function(event) {
-  const sidebar = document.querySelector('.sidebar');
+  const sidebar = document.querySelector('#sidebar');
   if (sidebar.classList.contains('show') && !sidebar.contains(event.target)) {
     sidebar.classList.remove('show');
   }
 });
 
-document.querySelector('.sidebar').addEventListener('click', function(event) {
+document.querySelector('#sidebar').addEventListener('click', function(event) {
   event.stopPropagation();
 });
 
