@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Earn Extra Cash || Login</title>
+  <link rel="stylesheet" href="admincss/admin-login.css" />
+
+  <link rel="stylesheet" href="boostrap/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+  
+</head>
+<body>
+
+
+  <!-- Preloader -->
+  <div id="preLoader">
+    <img src="../image/loader.gif" alt="loading...">
+  </div>
+
+
+  <div class="login-container" id="body">
+
+     <!-- <img src="../image/messages-3.jpg" alt="image"> -->
+    <h3>Admin Login</h3>
+
+    <form action="admin-dashboard.html" method="get">
+
+      <div class="form-group">
+        <input type="text" id="username" name="username" placeholder="" required/>
+        <label for="username">Username</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="" required/>
+        <label for="email">Email</label>
+      </div>
+
+
+      <div class="form-group">
+        <input type="password" id="password" name="password" required placeholder=" " />
+        <label for="password">Password</label>
+        <i class="bi bi-eye-slash toggle-password" onclick="togglePassword(this, 'password')"></i>
+      </div>
+
+      <button type="submit">Login</button>
+
+    
+     
+    </form>
+  </div>
+
+
+  <script src="admincss/admin-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard - Settings Overview</title>
+  <link rel="stylesheet" href="../jquery/jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="../jquery/jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/base/jquery-ui.min.css">
+  <script src="../jquery/jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/base/jquery-ui.min.css"></script>
+  <script src="../jquery/jquery-3.6.3.min.js"></script>
+  <script src="../jquery/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+  <link rel="stylesheet" href="../boostrap/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="admincss/settings.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li onclick="location.href='admin-dashboard.html'"><i class="bi bi-speedometer2"></i> <span>Dashboard</span></li>
+      <li onclick="location.href='users.html'"><i class="bi bi-people"></i> <span>Users</span></li>
+      <li onclick="location.href='tasks.html'"><i class="bi bi-ui-checks"></i> <span>Tasks</span></li>
+      <li onclick="location.href='withdrawals.html'"><i class="bi bi-wallet2"></i> <span>Withdrawals</span></li>
+      <li onclick="location.href='fae.html'"><i class="bi bi-wallet2"></i> <span>FAE Withdrawals</span></li>
+      <li onclick="location.href='referrals.html'"><i class="bi bi-share-fill"></i> <span>Referrals</span></li>
+      <li onclick="window.open('https://t.me/YOUR_TELEGRAM_CHANNEL', '_blank')"><i class="bi bi-megaphone-fill"></i> Sponsor Post</li>
+      <li onclick="location.href='settings.html'"><i class="bi bi-gear"></i> <span>Settings</span></li>
+      <li onclick="location.href='admin-login.html'"><i class="bi bi-box-arrow-right"></i> <span>Logout</span></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="topbar">Settings Overview</div>
+    
+
+
+
+    <!-- Main Content -->
+    <div>
+
+        <div class="card1">
+            <div class="flex">
+                <div class="profile-image">
+                    <img id="preview" src="#" alt="picture">
+                </div>   
+                <div class="profile-name">
+                    <h3>Okafor Chibuike Goodluck</h3>
+                    <p class="verified">verified</p>
+                    
+               </div>
+            </div>
+
+            
+
+
+
+            <div class="profile-status">
+                <div class="flexone">
+                    <h2>Username</h2>
+                    <p>kizsbrownog</p>
+                </div>
+
+                 <div class="flexone">
+                    <h2>Email Address</h2>
+                    <p>sponkibrownO.G@gmail.com</p>
+                </div>
+                
+                 <div class="flexone">
+                  <div>
+                    <h2>Update Password</h2>
+                    <p class="grey">Change your old password to a new one</p>
+                  </div>
+
+                  <div>
+                    <p onclick="togglePassword()"><a href="#">Change Password</a></p>
+                    <div class="reset" id="togglePassword">
+                      <form action="#" method="get">
+                        <input type="text" placeholder="Enter old password" required>
+                        <br><br>
+                        <input type="text" placeholder="Enter new password" required>
+                        <button type="submit">Reset</button>
+                      </form>  
+                  </div>
+
+                  </div>  
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <h1>Bank Details</h1>
+
+        <div class="card2">
+          <p class="bold">Change and Reset Your Bank Information</p>
+
+            <div class="bank-status">
+              <form action="#" method="get">
+                <div class="flextwo">
+                  <div>
+                    <h2>Bank Name  <a style="color:red;">*</a></h2>
+                    <p class="grey">Your bank name must match up to your details</p>
+                </div>
+                <input type="text" placeholder="First Bank" required>
+                </div>
+
+                 <div class="flextwo">
+                  <div>
+                    <h2>Account Name  <a style="color:red;">*</a></h2>
+                    <p class="grey">Input the correct Account name must match your Registration name</p>
+                  </div>  
+                    <input type="text" placeholder="Okafor Chibuike Goodluck" required>
+                </div>
+                
+                 <div class="flextwo">
+                  <div>
+                    <h2>Account Number  <a style="color:red;">*</a></h2>
+                    <p class="grey">Input the correct Account Number</p>
+                  </div>
+                  <input type="text" placeholder="eg. 2134565432" required>
+                   
+                </div>
+
+                <div class="flextwo">
+                  <div>
+                    <h2>Transaction PIN <a style="color:red;">*</a></h2>
+                    <p class="grey">Set your FlowEarmPro PIN</p>
+                  </div>
+                  <input type="text" placeholder="eg 5432" required>
+                   
+                </div>
+
+                <button type="submit">Submit</button>
+              </form>
+
+
+              <div class="bank-outcome">
+                <p>First Bank</p>
+                <p>Okafor Chibuike Goodluck</p>
+                <p>2134565432</p>
+              </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <h1>Security</h1>
+
+        <div class="card3">
+
+            <div class="security">
+
+              <form id="uploadimage" enctype="multipart/form-data">
+
+                <div class="flexthree">
+                  <div>
+                    <h2>Upload image</h2>
+                    <p class="grey">Click here to upload an image</p>
+                  </div>
+
+                  <div class="resets">
+                  <div class="flexinput">
+                    <input type="file" id="fileupload" accept="image/*" name="image" style="display:none;">
+                  </div>
+                      <button type="button" id="uploadBtn">Upload Picture</button>
+                  </div>
+                  </form>  
+                </div>
+                             
+                 <div class="flexthree">
+                    <div>
+                      <h2>Change Theme</h2>
+                      <p class="grey">Light & Dark Mode</p>
+                    </div>
+
+                    <div>
+                        <label class="switch">
+                          <input type="checkbox" id="modeToggle">
+                          <span class="slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+                
+                 <div class="flexthree">
+                  <div>
+                    <h2>Help Center</h2>
+                    <p class="grey">Contact Support</p>
+                  </div>
+                  <p><a href="https://www.whatsapp.com"><i class="bi bi-whatsapp"></i> Contact Us</a></p>
+                   
+                </div>
+
+                 <div class="flexthree">
+                  <div>
+                    <h2>Delete Account</h2>
+                    <p class="grey">Click Delete to remove your account Automatically</p>
+                    <p class="grey">Warning this action can`t be reverse</p>
+                  </div>
+                  <p><a href="#"><i class="bi bi-trash"></i> Delete</a></p>
+                   
+                </div>
+                 
+               
+
+            </div>
+
+
+        </div>
+
+
+
+
+      </div>
+    
+
+  </main>
+
+
+
+
+
+
+  <script src="./admincss/admin-login.js"></script>
+</body>
+</html>
